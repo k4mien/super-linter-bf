@@ -9,6 +9,11 @@ on:
         required: false
         type: string
 
+      filter-regex-include:
+        description: A regex to include files to linting
+        required: false
+        type: string
+
 permissions:
   contents: read
   statuses: write
@@ -46,6 +51,13 @@ jobs:
         run: |
           {
             echo "FILTER_REGEX_EXCLUDE=${{ inputs.filter-regex-exclude }}" >> $GITHUB_ENV
+          }
+
+      - name: FILTER REGEX_INCLUDE
+        if: ${{ inputs.filter-regex-include }}
+        run: |
+          {
+            echo "FILTER_REGEX_INCLUDE=${{ inputs.filter-regex-include }}" >> $GITHUB_ENV
           }
 
       - name: Lint Code Base
