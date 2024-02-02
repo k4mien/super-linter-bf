@@ -61,7 +61,7 @@ jobs:
           }
 
       - name: Lint Code Base
-        uses: super-linter/super-linter/slim@v5.7.2
+        uses: super-linter/super-linter/slim@v6.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEFAULT_BRANCH: ${{ env.DEFAULT_BRANCH }}
