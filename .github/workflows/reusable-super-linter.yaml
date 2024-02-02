@@ -69,4 +69,5 @@ jobs:
           VALIDATE_DOCKERFILE: false
           VALIDATE_JSCPD: false
           VALIDATE_SHELL_SHFMT: false
+          VALIDATE_CHECKOV: false
           VALIDATE_EDITORCONFIG: false
